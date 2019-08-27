@@ -9,11 +9,10 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
         EditText txtTempoGasto;
+        EditText txtRendimentoVeiculo;
         EditText txtVelocidadeMedia;
-        EditText txtRedimentoVeiculo;
-        EditText txtDistancia;
-        TextView lblDistancia;
-        TextView lblConsumo;
+        TextView lblDistancia2;
+        TextView lblConsumo2;
 
 
         @Override
@@ -23,19 +22,21 @@ public class MainActivity extends AppCompatActivity {
             setContentView(R.layout.activity_main);
             txtTempoGasto= findViewById(R.id.txtTempoGasto);
             txtVelocidadeMedia= findViewById(R.id.txtVelocidadeMedia);
-            txtRedimentoVeiculo= findViewById(R.id.txtRedimentoVeiculo);
-            lblDistancia = findViewById(R.id.lblDistancia);
-            lblConsumo = findViewById(R.id.lblConsumo);
+            txtRendimentoVeiculo= findViewById(R.id.txtRendimentoVeiculo);
+            lblDistancia2 = findViewById(R.id.lblDistancia2);
+            lblConsumo2 = findViewById(R.id.lblConsumo2);
+
         }
 
         public void onCalcular(View v) {
 
-                int TempoGasto = Integer.parseInt(txtTempoGasto.getText().toString());
-                int VelocidadeMedia = Integer.parseInt(txtVelocidadeMedia.getText().toString());
-                int Distancia = Integer.parseInt(txtDistancia.getText().toString());
-                Distancia = TempoGasto * VelocidadeMedia;
-                txtDistancia.setText(Distancia);
+                double TempoGasto = Double.parseDouble(txtTempoGasto.getText().toString());
+                int RendimentoVeiculo =  Integer.parseInt(txtRendimentoVeiculo.getText().toString());
+                int VelocidadeMedia =  Integer.parseInt(txtVelocidadeMedia.getText().toString());
+                double Distancia  = TempoGasto * VelocidadeMedia;
+                lblDistancia2.setText("" + Distancia);
+                double Consumo = Distancia / RendimentoVeiculo;
+                lblConsumo2.setText("" + Consumo);
 
             }
         }
-    }
