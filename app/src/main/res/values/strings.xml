@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ETEC VIAGEM</string>
+    <string name="TEMPO_GASTO">tempo_gasto</string>
+    <string name="VELOCIDADE_MEDIA">velocidade media</string>
+    <string name="RENDIMENTO_VEICULO">Redimento Veiculo</string>
+    <string name="CALCULAR">Calcular</string>
+    <string name="CONSUMO">Consumo</string>
+    <string name="DISTANCIA">Distancia</string>
+
+</resources>
